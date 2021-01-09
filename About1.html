@@ -1,42 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<title>Page Title</title>
-<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-body {
-  font-family: Arial, Helvetica, sans-serif;
+body, html {
+  height: 100%;
   margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Style the header */
-.header {
-  padding: 80px;
-  text-align: left;
-  background: #FFFFFF;
-  color: black;
+* {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  /* The image used */
+  background-image: url("background.jpg");
+  
+
+  /* Full height */
+  height: 100%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(255,255,255); /* Black w/opacity/see-through */
+  color: grey;
+  font-weight: regular;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 30;
+  width: 80%;
+  height: 80%;
+  padding: 20px;
+  text-align: center;
 }
   
- /* Increase the font size of the h1 element */
-.header h1 {
-  font-size: 42px;
-}
-
-/* Style the top navigation bar */
-.navbar {
+  .navbar {
   overflow: hidden;
   background-color: #333;
   position: fixed;
   bottom: 0;
   width: 100%;
 }
-  
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background: #f1f1f1;
+  color: black;
+}
+
+.navbar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.main {
+  padding: 16px;
+  margin-bottom: 30px;
+}
+
 img {
   border: 1px solid #ddd; /* Gray border */
   border-radius: 4px;  /* Rounded border */
   padding: 5px; /* Some padding */
-  width: 150px; /* Set a small width */
+  width: 300px; /* Set a small width */
+  float: center;
 }
 
 /* Add a hover effect (blue shadow) */
@@ -44,29 +91,40 @@ img:hover {
   box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
 }
 
-
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 </style>
 </head>
 <body>
 
-<div class="header">
-  <h1>About</h1>
-  <p>I am an environmental historian of North America. My interest in Great Lakes borderlands came via a graduate degree in urban design for which I first moved to Michigan. In the years since, I have continued to live in and research borderlands. I am braodly interested in how infrastucture creation reveals the myriad social and political tensions that undergird our understanding of borders and nations. My writing on these subjects have appeared in publications from <i>Contingent Magazine</i> to <i>Water History.</i></p>
+<div class="bg-image"></div>
+
+<div class="bg-text">
+  <h1 style="font-size:50px">About</h1>
+  <p>I am an environmental historian of North America. My interest in Great Lakes borderlands came via a graduate degree in urban design for which I first moved to Michigan. In the years since, I have continued to live in and research borderlands. I am broadly interested in how infrastucture creation reveals the myriad social and political tensions that undergird our understanding of borders and nations. My writing on these subjects have appeared in publications from <i>Contingent Magazine</i> to <i>Water History</i> as well as websites such as the <a href="https://niche-canada.org/2020/12/01/twice-removed-environmental-history-and-the-canada-u-s-border-through-an-outsiders-eyes/">Network in Canadian History & Environment</a></p>
 </div>
 
-    <a target="_blank" href="aa.jpg">
-  <img src="aa.jpg" alt="Boblo" style="width:150px">
+
+  
+  <a target="_blank" href="aa.jpg">
+  <img src="aa.jpg" alt="Boblo" style="width:300px" class="center">
 </a>
  
-<div class="navbar">
-  <a href="#">Ramya Swayamprakash</a>
-  <a href="#">Home</a>
-  <a href="#">About</a>
-  <a href="#">Writing</a>
-  <a href="#">Research</a>
-  <a href="#">Curriculum Vitae</a>
-  <a href="#">Contact</a>
-</div>
 
+  <!-- Page Content -->
+  
+  <div class="navbar">
+  <a href="#Home">Ramya Swayamprakash</a>
+  <a href="#Home">Home</a>
+  <a href="#About">About</a>
+  <a href="#Writing">Writing</a>
+  <a href="#Research">Research</a>
+  <a href="#CV">Curriculum Vitae</a>
+  <a href="#Contact">Contact</a>
+</div>
 </body>
 </html>
+
