@@ -18,12 +18,34 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
-}
-.navbar a {
-  font-size: 14px;
  }
 .header h1 {
-  font-size: 20px;
+  font-size: 42px;
+}
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
 }
     </style>
 
@@ -58,44 +80,16 @@ img {
 
   <!-- Page Content -->
   
-   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom">
-    <div class="container">
-      <a class="navbar-brand" href="#">Ramya Swayamprakash</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-           <a class="nav-link" href="index.html">Home
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-          <a class="nav-link" href="About.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Writing.html">Writing</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Research.html">Research</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="CV.html">Curriculum Vitae</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Contact.html">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <div class="navbar">
+  <a href="#">Ramya Swayamprakash</a>
+  <a href="#">Home</a>
+  <a href="#">About</a>
+  <a href="#">Writing</a>
+  <a href="#">Research</a>
+  <a href="#">Curriculum Vitae</a>
+  <a href="#">Contact</a>
+</div>
 
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
