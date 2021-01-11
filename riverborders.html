@@ -1,0 +1,118 @@
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <title>Points on a map</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.css' rel='stylesheet' />
+	 
+    <style>    
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      #map {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+      }
+
+	    
+.dropbtn {
+  background-color: #D3D3D3;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(255,255,255,0.9);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #D3D3D3;}
+
+	    
+</style>
+	  
+  </head>
+	
+  <body>
+  <div id='map'></div>
+	  	 
+	
+	  
+	   
+    <script>
+	mapboxgl.accessToken = 'pk.eyJ1IjoicmFteXNhdCIsImEiOiJjaXU5dHF5bzkwMDgwMnlxbXBqN2gyZHFxIn0.a1OCCJrEbzxQ4cJjtqRrew';
+	    var map = new mapboxgl.Map({
+      container: 'map',
+		    style: 'mapbox://styles/ramysat/ck9appqby22gh1iplmukywmk2', 
+		    center: [-82.9743, 42.3433],
+      zoom: 10.7,
+		     attributionControl: false
+    })
+    .addControl(new mapboxgl.AttributionControl({
+        customAttribution: '© Ramya Swayamprakash | This site was supported by <a href="http://chi.anthropology.msu.edu">CHI at MSU</a>'
+    }));
+   ;	    
+	    map.on('click', function(e) {
+  var features = map.queryRenderedFeatures(e.point, {
+    layers: ['border-rivers'] 
+  });
+
+  if (!features.length) {
+    return;
+  }
+
+  var feature = features[0];
+
+  var popup = new mapboxgl.Popup({ offset: [0, -15] })
+    .setLngLat(feature.geometry.coordinates)
+    .setHTML('<h3>' + feature.properties.title + '</h3><p>' + feature.properties.description + '</p>')
+    .addTo(map);	 
+	   
+});
+	    
+	  </script>
+	  
+
+
+<div class="dropdown">
+  <button class="dropbtn">River Borders</button>
+  <div class="dropdown-content">
+	   <a href="index.html">Home</a>
+    <a href="About.html">About</a>
+    <a href="RiverBorders1.html">River Borders: A Very Short Primer</a>
+	  <a href="RiverBorders2.html">North American River Borders</a>
+    <a href="Bibliography.html">More on Borders</a>
+    <a href="Contact.html">Contact</a>
+  </div>
+</div>
+
+   
+	   </body>
+</html>
