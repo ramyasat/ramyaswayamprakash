@@ -8,6 +8,34 @@ body {font-family: Verdana, sans-serif; margin:0}
 .mySlides {display: none}
 img {vertical-align: middle;}
 
+ .navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background: #f1f1f1;
+  color: black;
+}
+
+.navbar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
 /* Slideshow container */
 .slideshow-container {
   max-width: 1000px;
@@ -89,104 +117,72 @@ img {vertical-align: middle;}
 <div class="slideshow-container">
 
 <div class="mySlides fade">
-  
-  <img src=“1.jpg" style="width:100%">
-  
+  <img src="1.jpg" style="width:100%"> 
 </div>
-
 <div class="mySlides fade">
-  
-  <img src=“2.jpg" style="width:100%">
-  
+  <img src="2.jpg" style="width:100%">  
 </div>
-
 <div class="mySlides fade">
-  
-  <img src=“3.jpg" style="width:100%">
-  
+  <img src="3.jpg" style="width:100%">
 </div>
-
-</div>
-
 <div class="mySlides fade">
-  
-  <img src=“4.jpg" style="width:100%">
-  
+  <img src="4.jpg" style="width:100%">
+</div>
+  <div class="mySlides fade">
+  <img src="5.jpg" style="width:100%">
+</div>
+  <div class="mySlides fade">
+  <img src="6.jpg" style="width:100%">
+</div>
+  <div class="mySlides fade">
+  <img src="7.jpg" style="width:100%">
+</div>
+  <div class="mySlides fade">
+  <img src="8.jpg" style="width:100%">
+</div>
+  <div class="mySlides fade">
+  <img src="9.jpg" style="width:100%">
+</div>
+  <div class="mySlides fade">
+  <img src="10.jpg" style="width:100%">
+</div>
+  <div class="mySlides fade">
+  <img src="11.jpg" style="width:100%">
+</div>
+  <div class="mySlides fade">
+  <img src="12.jpg" style="width:100%">
+</div>
+  <div class="mySlides fade">
+  <img src="13.jpg" style="width:100%">
+</div>
+  <div class="mySlides fade">
+  <img src="14.jpg" style="width:100%">
 </div>
 
-</div>
-
-<div class="mySlides fade">  
-  <img src=“5.jpg" style="width:100%">
-  
-</div>
-</div>
-
-<div class="mySlides fade">
-  <img src=“6.jpg" style="width:100%">
-  
-</div>
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
 
 </div>
+<br>
 
-<div class="mySlides fade">
-  
-  <img src=“7.jpg" style="width:100%">
-  
-</div>
-</div>
-
-<div class="mySlides fade">
-  
-  <img src=“8.jpg" style="width:100%">
-  
-</div>
-
-</div>
-
-<div class="mySlides fade">
-  
-  <img src=“9.jpg" style="width:100%">
-  
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+   <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+     <span class="dot" onclick="currentSlide(6)"></span>
+      <span class="dot" onclick="currentSlide(7)"></span>
+       <span class="dot" onclick="currentSlide(8)"></span>
+        <span class="dot" onclick="currentSlide(9)"></span>
+         <span class="dot" onclick="currentSlide(10)"></span>
+          <span class="dot" onclick="currentSlide(11)"></span>
+           <span class="dot" onclick="currentSlide(12)"></span>
+            <span class="dot" onclick="currentSlide(13)"></span>
+             <span class="dot" onclick="currentSlide(14)"></span>
+             
 </div>
 
-</div>
-
-<div class="mySlides fade">
-  
-  <img src=“10.jpg" style="width:100%">
-  
-</div>
-
-</div>
-
-<div class="mySlides fade">
-  
-  <img src=“11.jpg" style="width:100%">
-  
-</div>
-</div>
-
-<div class="mySlides fade">
-  
-  <img src=“12.jpg" style="width:100%">
-  
-</div>
-
-</div>
-
-<div class="mySlides fade">
-  
-  <img src=“13.jpg" style="width:100%">
-  
-</div>
-</div>
-
-<div class="mySlides fade">
-  
-  <img src=“14.jpg" style="width:100%">
-  
-</div>
 
 
 
@@ -195,8 +191,12 @@ img {vertical-align: middle;}
 
 </div>
 <br>
-  
-  <div class="navbar">
+
+<div style="text-align:center">
+ 
+</div>
+
+<div class="navbar">
   <a href="Home.html">Ramya Swayamprakash</a>
   <a href="Home.html">Home</a>
   <a href="About.html">About</a>
@@ -208,6 +208,7 @@ img {vertical-align: middle;}
   </div>
  
 </div>
+
 
 <script>
 var slideIndex = 1;
