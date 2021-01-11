@@ -20,42 +20,42 @@
       }
 
 	    
-.dropbtn {
-  background-color: #D3D3D3;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
+ .navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(255,255,255,0.9);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
+.navbar a {
+  float: left;
   display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
 }
 
-.dropdown-content a:hover {background-color: #ddd;}
+.navbar a:hover {
+  background: #f1f1f1;
+  color: black;
+}
 
-.dropdown:hover .dropdown-content {display: block;}
+.navbar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
 
-.dropdown:hover .dropbtn {background-color: #D3D3D3;}
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1800px;
+  max-height: 700px;
+  position: relative;
+  margin: auto;
+}
 
-	    
 </style>
 	  
   </head>
@@ -76,7 +76,7 @@
 		     attributionControl: false
     })
     .addControl(new mapboxgl.AttributionControl({
-        customAttribution: '© Ramya Swayamprakash | This site was supported by <a href="http://chi.anthropology.msu.edu">CHI at MSU</a>'
+        customAttribution: '© Ramya Swayamprakash | This webpage was supported by <a href="http://chi.anthropology.msu.edu">CHI at MSU</a>'
     }));
    ;	    
 	    map.on('click', function(e) {
@@ -101,18 +101,18 @@
 	  
 
 
-<div class="dropdown">
-  <button class="dropbtn">River Borders</button>
-  <div class="dropdown-content">
-	   <a href="index.html">Home</a>
-    <a href="About.html">About</a>
-    <a href="RiverBorders1.html">River Borders: A Very Short Primer</a>
-	  <a href="RiverBorders2.html">North American River Borders</a>
-    <a href="Bibliography.html">More on Borders</a>
-    <a href="Contact.html">Contact</a>
+<div class="navbar">
+  <a href="Home.html">Ramya Swayamprakash</a>
+  <a href="Home.html">Home</a>
+  <a href="About.html">About</a>
+  <a href="Writing.html">Writing</a>
+  <a href="Research.html">Research</a>
+  <a href="DH.html">Digital Humanities</a>  
+  <a href="CV.html">Curriculum Vitae</a>
+  <a href="Contact">Contact</a>
   </div>
+ 
 </div>
-
    
 	   </body>
 </html>
