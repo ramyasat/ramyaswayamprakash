@@ -38,7 +38,7 @@ img {vertical-align: middle;}
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1400px;
+  max-width: 1600px;
   max-height: 700px;
   position: relative;
   margin: auto;
@@ -214,6 +214,7 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
+ setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
 </script>
 
