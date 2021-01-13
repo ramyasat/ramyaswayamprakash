@@ -1,1 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
+* {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  /* The image used */
+  background-image: url("background.jpg");
+  
+
+  /* Full height */
+  height: 100%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(255,255,255); /* Black w/opacity/see-through */
+  color: grey;
+  font-weight: regular;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 30;
+  width: 80%;
+  height: 80%;
+  padding: 20px;
+  text-align: inline-left;
+  overflow: scroll;
+  word-wrap: break-word;
+}
+ 
+ .navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background: #f1f1f1;
+  color: black;
+}
+
+.navbar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1800px;
+  max-height: 700px;
+  position: relative;
+  margin: auto;
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+</style>
+</head>
+<body>
+<div class="bg-image"></div>
+
+<div class="bg-text">
+<p><strong>Research</strong></p>
+
+<iframe src=“research2.jpgl” name="iframe_a" height="300px" width="100%" title="River Borders"></iframe>
+
+<p>I am an environmental and borderlands historian and my research is organized into inquiries about infrastructure and border history with a geographical focus on the U.S.-Canada border along the Detroit River. I have  in the process of publishing scholarship on the role of dredging as a political and territorializing process in the Detroit River in the late nineteenth and early twentieth centuries. I have long been interested in movement, migration, and mobility along and across political borders and explored this in my master’s thesis in urban design at Lawrence Technology University. I have recently become interested in questions of rivers as borders and broadly, borders themselves. I am interested in how borders manifest themselves on the ground and on water. Borders are more than lines on maps; they are realities that need to be understood in the unique historical-ecological- sociological- technological circumstances that make the borders in the first place.</p>
+
+<p>My dissertation explores the origins, motivations, and effects of dredging to offer a new history of the Detroit River. In so doing, it attempts to offer a new analytical lens by thinking about dredging as a historical, material, <I>and</I> ecological process. Furthermore, given the binational nature of the shipping channel, this dissertation argues that dredging is as much a territorializing process as it is a technological and political process. This is not a story about the rise and fall of dredging for dredging continues as a maintenance activity, worth multimillion contracts, every year; rather, it is a story of nature being altered and manipulated for greater economic returns. Between 1865 and 1930, the Detroit River went from a transportation chokepoint to an efficient and managed waterway. In examining dredging as a political, technological, and territorializing process, this dissertation is a new environmental history of the Detroit River that pays special attention to infrastructure and its impact on humans and non-humans.</p>
+
+ <p><a target="_blank" href=“Research.jpg"><img src=“Research.jpg" alt="Boblo" style="width:300px;margin-left:15px;"></a>
+
+</div>
+
+<div class="navbar">
+  <a href="Home.html">Ramya Swayamprakash</a>
+  <a href="Home.html">Home</a>
+  <a href="About.html">About</a>
+  <a href="Writing.html">Writing</a>
+  <a href="Research.html">Research</a>
+  <a href="DH.html">Digital Humanities</a>  
+  <a href="CV.html">Curriculum Vitae</a>
+  <a href="Contact">Contact</a>
+  </div>
+
+</body>
+</html> 
